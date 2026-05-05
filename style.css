@@ -87,7 +87,6 @@ nav {
 }
 
 .nav-links {
-  margin-left: auto;
   display: flex;
   gap: 24px;
   font-size: 12px;
@@ -172,22 +171,29 @@ nav {
   border: 1px solid var(--border);
   border-radius: 6px;
   padding: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
 }
 
-.photo-label { font-size: 12px; margin-bottom: 12px; }
-
 .profile-photo {
-  width: 100%;
-  aspect-ratio: 1 / 1;
+  width: 160px;
+  height: 160px;
   object-fit: cover;
-  object-position: center top;
-  border-radius: 3px;
+  object-position: center 35%;
+  border-radius: 4px;
   display: block;
   filter: grayscale(15%);
   transition: filter 0.4s;
+  border: 1px solid var(--border-mid);
 }
 
 .profile-photo:hover { filter: grayscale(0%); }
+
+.photo-info { display: flex; flex-direction: column; gap: 4px; width: 100%; }
+.photo-name { color: var(--text-bright); font-size: 13px; font-weight: 500; }
+.photo-sub  { color: var(--text-dim); font-size: 11px; }
 
 .toml-block {
   background: var(--bg-elevated);
@@ -507,7 +513,7 @@ footer {
 
   #hero         { padding: 32px 24px; grid-template-columns: 1fr; gap: 32px; }
   .hero-name    { font-size: 52px; }
-  .profile-photo { aspect-ratio: 3 / 1; object-position: center 20%; }
+
 
   #about        { padding: 40px 24px; }
   .about-grid   { grid-template-columns: 1fr; gap: 40px; }
